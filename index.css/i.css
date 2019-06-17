@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+.topNavBar {
+	display: flex;
+	padding-top: 28px;
+	padding-bottom: 10px;
+	position: fixed;
+	width: 100%;
+}
+.topNavBar > .text {
+	font-family: Arial Black;
+	font-size: 24px;
+}
+.topNavBar > .text > .rs {
+	color: #e6686a;
+	margin-left: 12px;
+	
+}
+.topNavBar > .text > .card {
+	color: #9a9da2;
+	margin-left: 6px;
+}
+.topNavBar > .nav {
+	margin-right: 20px;
+	width: 100%;
+}
+.topNavBar > .nav > ul {
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:flex-end;
+	margin-right: 20px;
+	width: 100%;
+}
+.topNavBar > .nav  li {
+	padding: 0 17px 5px 17px;
+}
+.topNavBar > .nav  li a {
+	color: #b7b7b7;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 6px;
+	padding-bottom: 3px;
+	display: block;
+	border-bottom: 3px solid transparent;/*先把位置占到這樣hover不會移動*/
+}
+.topNavBar > .nav  li a:hover {
+	border-bottom: 3px solid red;
+}
+
+.bg {
+	background-image: url(../img/rs-cover.jpg);
+	background-position: center center;
+	height: 515px;
+}
+.bg .mask {
+	height: 515px;
+	background: rgba(0, 0, 0, 0.8)
+}

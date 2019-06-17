@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.topNavBar {
+	padding: 20px 0 20px 0;
+}
+.topNavBar > .text {
+	font-size: 24px;
+	font-family: Arial Black;
+}
+.topNavBar > .text > .rs {
+	color: #e6686a;
+	margin-left: 12px;
+}
+.topNavBar > .text > .card {
+	color: #9a9da2;
+	margin-left: 6px;
+}
+.topNavBar > .text {
+	float: left;
+}
+.topNavBar > .nav {
+	float: right;
+}
+.topNavBar > .nav ul li {
+	float: left;
+	margin: 8px 17px 0 17px;
+}
+.topNavBar > .nav ul li a {
+	/* border-bottom: 1px solid red; */
+	padding-bottom: 3px;
+	color: #b7b7b7;
+	font-size: 12px;
+	font-weight: bold;
+}
+.topNavBar > .nav ul li a:hover {
+	border-bottom: 3px solid red;
+}
