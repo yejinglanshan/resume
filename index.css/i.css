@@ -1,64 +1,289 @@
 * {
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 2000px;
+  background: #efefef;
+}
+a {
+  text-decoration: none;
 }
 ul {
-	list-style: none;
+  list-style: none;
 }
-.topNavBar {
-	display: flex;
-	padding-top: 28px;
-	padding-bottom: 10px;
-	position: fixed;
-	width: 100%;
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #dedede;
 }
-.topNavBar > .text {
-	font-family: Arial Black;
-	font-size: 24px;
-}
-.topNavBar > .text > .rs {
-	color: #e6686a;
-	margin-left: 12px;
-	
-}
-.topNavBar > .text > .card {
-	color: #9a9da2;
-	margin-left: 6px;
-}
-.topNavBar > .nav {
-	margin-right: 20px;
-	width: 100%;
-}
-.topNavBar > .nav > ul {
-	display:flex;
-	flex-flow:row nowrap;
-	justify-content:flex-end;
-	margin-right: 20px;
-	width: 100%;
-}
-.topNavBar > .nav  li {
-	padding: 0 17px 5px 17px;
-}
-.topNavBar > .nav  li a {
-	color: #b7b7b7;
-	font-size: 12px;
-	font-weight: bold;
-	padding-top: 6px;
-	padding-bottom: 3px;
-	display: block;
-	border-bottom: 3px solid transparent;/*先把位置占到這樣hover不會移動*/
-}
-.topNavBar > .nav  li a:hover {
-	border-bottom: 3px solid red;
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
-.bg {
-	background-image: url(../img/rs-cover.jpg);
-	background-position: center center;
-	height: 515px;
+/* 头部信息 */
+header {
+  width: 100%;
+  position: fixed;
 }
-.bg .mask {
-	height: 515px;
-	background: rgba(0, 0, 0, 0.8)
+header .wrap {
+  display: flex;
+  
+  justify-content: space-between;
+}
+header .logo {
+  font-family: 'Arial Black';
+  font-size: 24px;
+  margin-left: 16px;
+  margin-top: 23px;
+}
+header .logo span:nth-child(1) {
+  color: #e06567;
+}
+header .logo span:nth-child(2) {
+  color: #b7b7b7;
+  margin-left: 4px;
+}
+header nav ul {
+  display: flex;
+  flex-grow: nowrap;
+  justify-content: space-between;
+  margin-right: 33px;
+}
+header nav ul li {
+  margin-top: 30px;
+  margin-left: 34px;
+}
+header nav ul a {
+  color: #b7b7b7;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 5px;
+  
+}
+header nav ul a:hover {
+  border-bottom: 3px solid #e06567;
+}
+/* banner */
+.banner {
+  height: 515px;
+  background-image: url(../img/rs-cover.jpg) ;
+  background-position: center center;
+  background-size: cover;
+}
+.banner .mask {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* 个人介绍 */ 
+main {
+  margin-top: -340px;
+}
+.info {
+  max-width: 940px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.5)
+}
+.info .info-header {
+  padding: 50px;
+ 
+}
+.info .info-header .picture {
+  float: left;
+  width: 299px;
+  height: 347px;
+  background-image: url(../img/avatar.jpg);
+  margin-right: 65px;
+}
+.info .info-header .text {
+  float: left;
+}
+.info .info-header .text .welcome {
+  background: #e6686a;
+  color: white;
+  display: inline-block;
+  padding: 4px 16px;
+  line-height: 22px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.info .info-header .text .welcome .triangle {
+  display: block;
+  position: absolute;
+  border: 10px solid transparent;
+  border-left-color: #e06567;
+  border-top-width: 0;
+  top: 100%;
+  left: 4px; 
+}
+.info .info-header .text {
+  width: 470px;
+}
+.info .info-header .text h1 {
+  font-weight: normal;
+}
+.info .info-header .text hr {
+  margin: 20px 0 20px 0;
+  color: #b7b7b7;
+}
+
+.info .info-header .text dd {
+  width: 70%;
+  font-weight: bold;
+}
+.info .info-header .text dt {
+  width: 30%;
+  color: #9da0a7;
+}
+.info .info-header .text dd,
+.info .info-header .text dt {
+  float: left;
+  margin: 5px 0;
+}
+.info .footer {
+  /* height: 500px; */
+  background: #e06567;
+  text-align: center;
+}
+.info .footer svg {
+  width: 30px;
+height: 30px;
+fill: white;
+vertical-align: top;
+}
+.info .footer  a {
+  display: inline-block;
+  width: 40px;
+  line-height: 30px;
+  padding: 5px 0;
+  border-radius: 50%;
+  margin: 16px;
+  
+}
+.info .footer  a:hover {
+  background: #cf5d5f;
+}
+.download {
+  margin-top: 40px;
+  text-align: center;
+}
+.download > a {
+  color: #3d445e;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  padding: 19px 46px;
+  border: 1px solid gray;
+}
+.download > a:hover {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.download > p {
+  font-family: kai;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.8;
+}
+/* section */
+section {
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.skill ul  {
+  text-align: left;
+  background: #fff;
+  padding: 42px 50px 10px;
+  margin-top: 30px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.skill ul li {
+  float: left;
+  width: 48%;
+  margin-right: 2%;
+
+}
+.skill .progressBar {
+  height: 5px;
+  background: #fae1e1;
+  border-radius: 2px;
+  margin: 4px 0 40px;
+}
+.skill .progressBar .progress1 {
+  height: 100%;
+  width: 10%;
+  border-radius: 2px;
+  background: #e6686a;
+}
+
+.skill .progressBar .progress2 {
+  height: 100%;
+  width: 40%;
+  border-radius: 2px;
+  background: #e6686a;
+}
+.skill .progressBar .progress3 {
+  height: 100%;
+  width: 30%;
+  border-radius: 2px;
+  background: #e6686a;
+}
+.skill .progressBar .progress4 {
+  height: 100%;
+  width: 80%;
+  border-radius: 2px;
+  background: #e6686a;
+}
+.skill .progressBar .progress5 {
+  height: 100%;
+  width: 60%;
+  border-radius: 2px;
+  background: #e6686a;
+}
+.skill .progressBar .progress6 {
+  height: 100%;
+  width: 50%;
+  border-radius: 2px;
+  background: #e6686a;
+}
+/* 作品集 */
+.portfolio {
+  text-align: center;
+}
+.portfolio h2 {
+  margin-bottom: 20px;
+}
+.portfolio nav {
+  display: inline-block;
+  /* margin-top: 32px; */
+}
+.portfolio nav ul li {
+  float: left;
+  margin-left: 40px;
+}
+.portfolio .progressBar {
+  height: 5px;
+  background: #fff;
+  border-radius: 2px;
+}
+.portfolio .works {
+  margin-top: 30px;
+}
+.portfolio .works img {
+  float: left;
+}
+.portfolio .works .big img {
+  margin-right: 41px;
+}
+.portfolio .works .small img:nth-child(1) {
+  margin-bottom: 25px;
 }
